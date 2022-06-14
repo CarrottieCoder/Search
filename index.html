@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div class = "container">
+            <a href="2.html" class="link-secondary" id="Image">Secondary link</a>
+            <a href="3.html" class="link-secondary"id="Advanced">Secondary link</a>
+            <div id ="formDiv">
+                <div id="header">Se<span style = "color: red">ar</span><span style="color: green">ch E</span>ngi<span style="color: rgb(255, 208, 0)">ne</span></div>
+                    <form id="googleForm">
+                        <input type="text" name="q" id="searchTxt">
+                        <button id = "submit" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                    <a href="https://www.google.com/doodles" class="btn btn-secondary-outline active" role="button" data-bs-toggle="button" aria-pressed="true" id="DoodleButton">Google Doodle</a>
+            </div>
+        </div>
+        <script>
+        var submit = document.getElementById("submit")
+            function sendToGoogle(){
+                var googleForm = document.getElementById("googleForm")
+                var q = document.getElementById("searchTxt").value;;
+                var href = "https://google.com/search?q=" + q;
+                googleForm.action = href;
+            }
+        submit.addEventListener('click', sendToGoogle)
+            
+        </script>
+    </body>
+</html>
